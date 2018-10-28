@@ -95,6 +95,13 @@ Similar to backup steps, but last command is
 cat backup.sql | docker exec -i $(docker-compose ps -q database) psql -U hackmd
 ```
 
+## create user
+
+```bash
+docker-compose exec codimd sh
+./bin/manage_users --add email --pass password
+```
+
 # Kubernetes
 
 To install use `helm install stable/hackmd`.
