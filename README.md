@@ -84,15 +84,16 @@ Please run the migration tool if you're upgrading from the old version.
 Start your docker and enter the terminal, follow below commands:
 
 ```bash
- docker-compose exec database pg_dump hackmd -U hackmd  > backup.sql
+docker-compose exec database pg_dump hackmd -U hackmd > baks/date-bak.sql
 ```
 
 
 ## Restore
 
 Similar to backup steps, but last command is
+
 ```bash
-cat backup.sql | docker exec -i $(docker-compose ps -q database) psql -U hackmd
+cat baks/date-bak.sql | docker exec -i $(docker-compose ps -q database) psql -U hackmd
 ```
 
 ## create user
