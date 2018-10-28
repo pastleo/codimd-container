@@ -1,0 +1,49 @@
+.spotlight {
+  position: fixed;
+  z-index: 15;
+  pointer-events: none;
+
+  transition: opacity 0.5s;
+  opacity: 0;
+}
+.spotlight.enabled {
+  opacity: 1;
+}
+
+.spotlight .spotlight-light {
+  position: absolute;
+  box-shadow: inset 0 0 6em 6em #00000087;
+  top: -10em;
+  bottom: -10em;
+  left: -10em;
+  right: -10em;
+}
+.spotlight .spotlight-dimmer {
+  position: absolute;
+  background: #00000087;
+}
+.spotlight .spotlight-dimmer.spotlight-dimmer-left {
+  right: 10em;
+  top: -100vh;
+  width: 200vw;
+  height: 200vh;
+}
+.spotlight .spotlight-dimmer.spotlight-dimmer-top {
+  bottom: 10em;
+  left: -10em;
+  width: 20em;
+  height: 200vh;
+}
+.spotlight .spotlight-dimmer.spotlight-dimmer-bottom {
+  left: 10em;
+  top: -100vh;
+  width: 200vw;
+  height: 200vh;
+}
+.spotlight .spotlight-dimmer.spotlight-dimmer-right {
+  top: 10em;
+  left: -10em;
+  width: 20em;
+  height: 200vh;
+}
+

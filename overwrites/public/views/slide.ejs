@@ -30,13 +30,10 @@
         <% } %>
 
         <!-- For reveal.js theme -->
-        <% if(typeof theme !== 'undefined' && theme) { %>
-        <link rel="stylesheet" href="<%- url %>/build/reveal.js/css/theme/<%= theme %>.css" id="theme">
-        <% } else { %>
         <link rel="stylesheet" href="<%- url %>/build/reveal.js/css/theme/black.css" id="theme">
-        <% } %>
+        <link rel="stylesheet" href="<%- url %>/overwrite-res/reveal.js/style.css">
         <!-- For syntax highlighting -->
-        <link rel="stylesheet" href="<%- url %>/build/reveal.js/lib/css/zenburn.css">
+        <link rel="stylesheet" href="<%- url %>/overwrite-res/reveal.js/xcode.css">
         <!-- For overwrite reveal.js -->
         <link rel="stylesheet" href="<%- url %>/css/slide.css">
 
@@ -111,6 +108,22 @@
         <script src="<%- url %>/build/MathJax/config/TeX-AMS-MML_HTMLorMML.js" defer></script>
         <%- include build/slide-pack-scripts %>
         <% } %>
+
+        <div id="spotlight" class="spotlight">
+            <div class="spotlight-light"></div>
+            <div class="spotlight-dimmer spotlight-dimmer-left"></div>
+            <div class="spotlight-dimmer spotlight-dimmer-top"></div>
+            <div class="spotlight-dimmer spotlight-dimmer-bottom"></div>
+            <div class="spotlight-dimmer spotlight-dimmer-right"></div>
+        </div>
+        <link rel="stylesheet" href="<%- url %>/overwrite-res/reveal.js/spotlight.css">
+
+        <div id="timeline" class="timeline"></div>
+        <link rel="stylesheet" href="<%- url %>/overwrite-res/reveal.js/timeline.css">
+
+        <script src="<%- url %>/overwrite-res/reveal.js/spotlight.js"></script>
+        <script src="<%- url %>/overwrite-res/reveal.js/timeline.js"></script>
+
     </body>
 </html>
 

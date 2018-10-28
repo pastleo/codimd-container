@@ -1,0 +1,10 @@
+.timeline {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 0px;
+  width: 0px;
+  z-index: 10;
+  box-shadow: 0 2.5px 20px 8px #42affa;
+  transition: 1s left;
+}

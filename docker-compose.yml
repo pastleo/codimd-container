@@ -94,6 +94,8 @@ services:
       - "3000:3000"
     volumes:
       - ./overwrites/public/views/slide.ejs:/codimd/public/views/slide.ejs
+      - ./overwrites/public/overwrite-res:/codimd/public/overwrite-res
+      #- ./overwrites/public/views/:/views # for dev slide.ejs, use docker exec to copy
     networks:
       - default
     restart: always
